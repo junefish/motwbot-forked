@@ -149,7 +149,8 @@ function newCharacter(userMessage, userId, channelId, userNickname, moves, userD
     userData[userId] = person;
     storage.set(channelId, userData);
     return 'CREATED A BLANK CHARACTER: Type !character to view,\
- or ?set to learn how to set your character stat.'
+ or ?set to learn how to set your character stat. You must have\
+ a character set up before you use moves.'
 }
 
 function characterSheet(userMessage, userId, channelId, userNickname, moves, userData){

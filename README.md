@@ -24,7 +24,6 @@ Once the bot is logged in, `?menu` or `!menu` will take you to the in-chat menu.
  EXAMPLE: `!roll 2d6 +1` OR `!roll 2d6 +sharp` OR `!roll 2d6 +charm -1`
  * `!kick`, `!act`, `!help`, `!investigate`, `!manipulate`, `!protect`, `!read`, `!magic`, `!bigmagic` - The basic MotW moves automatically roll a 2d6 and add the relevant stat from your character sheet. If you need to roll the move with an irregular stat, you can add +stat to the move. You can also add a +/-num to the move if necessary.  
  EXAMPLE: `!investigate` OR `!bigmagic +1` OR `!manipulate tough` OR `!protect sharp -1`
- * Some all-class advanced moves are also programmed into the bot, and can be found in the in-chat menu. Advanced moves may take a stat, a number, or nothing as a modifier.
  * Anything not programmed as a bot move can be dealt with using a `!roll` command.
 
  * Additional moves may be added in future versions!
