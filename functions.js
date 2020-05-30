@@ -52,7 +52,7 @@ function xdyRoll(userMessage, userId, channelId, userNickname, moves, userData){
     }
     total = total + addOn;
     let grandTotal = total + modStat;
-        if (modStat === 0 || !modStat){
+        if (!modStat){
             return (`You rolled [${result} ] = ${total}.`)}
         else if (modStat >= 0){
             return (`You rolled [${result} ] = ${total} + ${modStat}${showStat}. That's ${grandTotal}.`)}
