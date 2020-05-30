@@ -52,8 +52,8 @@ Enter this command at any time to check on your character stats.',
         key: ['set', 'stats', 'setstats', 'statset'],
         text: 'SET STATS: !set stat+value ...\nTo set your character stats,\
  enter the command followed by all the stats you want to set. Use the \
- stat type +/- stat value. Unentered stats will default\
- to zero or their existing value.\n\
+ stat type +/- stat value. Unentered stats will default to zero or their existing value.\
+ Typing name+nickname will enter your Disord Channel nickname.\n\
 EXAMPLE: !set name+bambino charm+1 cool-1 ... etc',
         error: 'Incorrect input, use the format: !set name+bambino charm+1 cool-1 etc...',
         method: functions.setStats

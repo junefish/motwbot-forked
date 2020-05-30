@@ -8,7 +8,7 @@ Althought this project was a labor of love, it was still labor. If you'd like to
 
 ## For Discord Users
 
-To add the MotW Bot to your Discord server, click this <a href="https://discord.com/api/oauth2/authorize?client_id=716008499120963654&permissions=0&scope=bot" target="_blank">link</a>. Once the bot is logged in, type `?menu` in the chat to access the in-chat menu.
+To add the MotW Bot to your Discord server, click this [link](https://discord.com/api/oauth2/authorize?client_id=716008499120963654&permissions=0&scope=bot). Once the bot is logged in, type `?menu` in the chat to access the in-chat menu.
 
 ### Commands
 
