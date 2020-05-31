@@ -174,16 +174,38 @@ function shift(userMessage, userId, channelId, userNickname, moves, userData){
                 if(stat){
                     i = parseInt(i)
                     let slashVal = userData[userId][key]
-                    if(value[0]==='name'){shiftPrintout.push(moves.shift.error); return}
-                    if(value[0]==='harm'){
+                    if(value[0]==='name'){
+                        shiftPrintout.push(moves.shift.error); return
+                    } else if(value[0]==='harm'){
                         slashVal = parseInt(slashVal.substring(0)) + i
                         if(isNaN(slashVal)){shiftPrintout.push(moves.shift.error)}
+                        if(slashVal<0){slashVal=0}
                             if(slashVal < 4){
                                 userData[userId][key] = `${slashVal} / 7`
                             } else if(slashVal > 3 && slashVal < 7){
                                 userData[userId][key] = `${slashVal} / 7 UNSTABLE!`
                             } else if(slashVal > 6){
                                 userData[userId][key] = `${slashVal} / 7 DYING!`
+                            }
+                            shiftPrintout.push(`${key}: ${userData[userId][key]}`)
+                    } else if(value[0]==='luck'){
+                        slashVal = parseInt(slashVal.substring(0)) + i
+                        if(isNaN(slashVal)){shiftPrintout.push(moves.shift.error)}
+                        if(slashVal<0){slashVal=0}
+                            if(slashVal < 7){
+                                userData[userId][key] = `${slashVal} / 7`
+                            } else if(slashVal > 6){
+                                userData[userId][key] = `${slashVal} / 7 DOOMED!`
+                            }
+                            shiftPrintout.push(`${key}: ${userData[userId][key]}`)
+                    } else if(value[0]==='exp'){
+                        slashVal = parseInt(slashVal.substring(0)) + i
+                        if(isNaN(slashVal)){shiftPrintout.push(moves.shift.error)}
+                        if(slashVal<0){slashVal=0}
+                            if(slashVal < 5){
+                                userData[userId][key] = `${slashVal} / 5`
+                            } else if(slashVal > 4){
+                                userData[userId][key] = `${slashVal} / 5 LVL UP!`
                             }
                             shiftPrintout.push(`${key}: ${userData[userId][key]}`)
                     } else{
@@ -214,9 +236,28 @@ function setStats(userMessage, userId, channelId, userNickname, moves, userData)
                     i = i.slice(value[0].length)
                     i = parseInt(i)
                     if(isNaN(i)){setErrors.push(moves.set.error)}
+                    if(i<0){i=0}
                         if(i < 4){i = `${i} / 7`}
                         else if(i > 3 && i < 7){i = `${i} / 7 UNSTABLE!`}
                         else if (i > 6){i = `${i} / 7 DYING!`}
+                    if(!i){setErrors.push(moves.set.error)}
+                    else{userData[userId][key] = i}
+                } else if (value[0]==="luck"){
+                    i = i.slice(value[0].length)
+                    i = parseInt(i)
+                    if(isNaN(i)){setErrors.push(moves.set.error)}
+                    if(i<0){i=0}
+                        if(i < 7){i = `${i} / 7`}
+                        else if (i > 6){i = `${i} / 7 DOOMED!`}
+                    if(!i){setErrors.push(moves.set.error)}
+                    else{userData[userId][key] = i}
+                } else if (value[0]==="exp"){
+                    i = i.slice(value[0].length)
+                    i = parseInt(i)
+                    if(isNaN(i)){setErrors.push(moves.set.error)}
+                    if(i<0){i=0}
+                        if(i < 5){i = `${i} / 5`}
+                        else if (i > 4){i = `${i} / 5 LVL UP!`}
                     if(!i){setErrors.push(moves.set.error)}
                     else{userData[userId][key] = i}
                 } else {

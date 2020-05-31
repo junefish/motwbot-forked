@@ -14,7 +14,7 @@ To add the MotW Bot to your Discord server, click this [link](https://discord.co
 
 Once the bot is logged in, `?menu` or `!menu` will take you to the in-chat menu. It lists all bot commands. In general, commands can be looked up with the prefix `?` and used with the prefix `!`
 
- * `!newcharacter` - Use this command to create a new blank character or to zero out your character stats. Each player must create their own character. Sometimes creating blanking out your character sheet will be necessary for updates in the bot to be visible.
+ * `!newcharacter` - Use this command to create a new blank character or to zero out your character stats. Each player must create their own character. Sometimes creating a new blank character sheet will be necessary for updates in the bot to be visible.
  * `!character` - Enter this command at any time to check on your character stats.
  * `!set stat+value` - To set your character stats, enter the command `!set` followed by all the stats you want to set. Use the stat type +/- stat value. Unentered stats will default to zero or their existing value. If you enter `name+nickname` it will enter your Disord Channel nickname.  
  Example: `!set name+bambino tough+1 charm+2 sharp-1 ... etc`

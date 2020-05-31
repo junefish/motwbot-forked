@@ -33,7 +33,10 @@ module.exports = moves = {
                 SHARP: ['sharp', 0],
                 TOUGH: ['tough', 0],
                 WEIRD: ['weird', 0],
-                HARM: ['harm', '0 / 7']
+                LUCK: ['luck', '0 / 7'],
+                HARM: ['harm', '0 / 7'],
+                EXP: ['exp', '0 / 5']
+
         }
         },
     newCharacter: {
